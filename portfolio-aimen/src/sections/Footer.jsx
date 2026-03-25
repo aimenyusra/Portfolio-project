@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Github, Mail, ExternalLink } from "lucide-react";
+import { GitBranch, Mail, ExternalLink } from "lucide-react";
 import styles from "./Footer.module.css";
 
 const SOCIAL_LINKS = [
-  { Icon: Github,       href: "#",                          label: "GitHub" },
+  { Icon: GitBranch,       href: "#",                          label: "GitHub" },
   { Icon: Mail,         href: "mailto:aimen@example.com",   label: "Email" },
   { Icon: ExternalLink, href: "#",                          label: "LinkedIn" },
 ];

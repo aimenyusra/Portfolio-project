@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, Github, ExternalLink } from "lucide-react";
+import { Send, Mail, GitBranch, ExternalLink } from "lucide-react";
 import FadeUp from "../components/Fadeup";
 import SectionLabel from "../components/SectionLabel";
 import styles from "./Contact.module.css";
@@ -23,7 +23,7 @@ export default function Contact() {
 
   const socials = [
     { icon: <Mail size={14} />,         label: "aimen@example.com", href: "mailto:aimen@example.com" },
-    { icon: <Github size={14} />,       label: "GitHub",            href: "#" },
+    { icon: <GitBranch size={14} />,       label: "GitHub",            href: "#" },
     { icon: <ExternalLink size={14} />, label: "LinkedIn",          href: "#" },
   ];
 

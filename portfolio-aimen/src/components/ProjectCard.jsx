@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Globe, Github } from "lucide-react";
-import FadeUp from "./components/Fadeup";
+import { Globe, GitBranch } from "lucide-react";
+import FadeUp from "./Fadeup";
 import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({ project, index }) {
@@ -51,7 +51,7 @@ export default function ProjectCard({ project, index }) {
               whileTap={{ scale: 0.97 }}
               className={styles.btnGithub}
             >
-              <Github size={13} /> GitHub
+              <GitBranch size={13} /> GitHub
             </motion.a>
           </div>
         </div>
