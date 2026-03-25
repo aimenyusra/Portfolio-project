@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Globe, Github } from "lucide-react";
-import FadeUp from "./components/FadeUp";
+import FadeUp from "./components/Fadeup";
 import styles from "./ProjectCard.module.css";
 
 export default function ProjectCard({ project, index }) {

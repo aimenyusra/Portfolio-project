@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, Terminal, Wrench, Zap, Layers, Sparkles } from "lucide-react";
-import FadeUp from "./components/FadeUp";
+import FadeUp from "../components/Fadeup";
 import SectionLabel from "../components/SectionLabel";
 import { SKILLS } from "../data";
 import styles from "./Skills.module.css";
