@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.line {
+  height: 1px;
+  flex: 1;
+  max-width: 40px;
+  background: rgba(124, 58, 237, 0.6);
+}
+
+.text {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a78bfa;
+}
