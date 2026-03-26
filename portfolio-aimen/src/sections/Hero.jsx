@@ -12,29 +12,27 @@ export default function Hero() {
     return () => clearInterval(t);
   }, []);
 
-  const scrollTo = (id) =>
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   const codeLines = [
-    { color: styles.lineViolet, text: "const Aimen = () => ({" },
-    { color: styles.lineCyan, text: "  name: 'Aimen Yusra'," },
-    { color: styles.lineCyan, text: "  role: 'Frontend Dev'," },
-    { color: styles.lineCyan, text: "  location: '→ Dubai'," },
-    { color: styles.lineEmerald, text: "  passion: 'UI/UX + Code'," },
-    { color: styles.lineViolet, text: "});" },
-    { color: styles.lineMuted, text: "" },
-    { color: styles.lineYellow, text: "export default Aimen;" },
+    { cls: styles.lineViolet,  text: "const Aimen = () => ({" },
+    { cls: styles.lineCyan,    text: "  name: 'Aimen Yusra'," },
+    { cls: styles.lineCyan,    text: "  role: 'Full Stack Dev'," },
+    { cls: styles.lineCyan,    text: "  location: '→ Dubai'," },
+    { cls: styles.lineEmerald, text: "  stack: 'React + Node'," },
+    { cls: styles.lineYellow,  text: "  passion: 'UI/UX + APIs'," },
+    { cls: styles.lineViolet,  text: "});" },
+    { cls: styles.lineMuted,   text: "export default Aimen;" },
   ];
 
   return (
     <section id="Home" className={styles.section}>
-      {/* Background */}
-      <div className={`${styles.bgGrid} bg-grid`} />
-      <div className={`${styles.orbViolet} orb orb-violet`} />
-      <div className={`${styles.orbCyan} orb orb-cyan`} />
+      <div className={styles.bgGrid} />
+      <div className={styles.orbViolet} />
+      <div className={styles.orbCyan} />
 
-      <div className={`container ${styles.grid}`}>
-        {/* ── Text Column ── */}
+      <div className={styles.container}>
+        {/* Text Column */}
         <div className={styles.textCol}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -43,7 +41,7 @@ export default function Hero() {
             className={styles.badge}
           >
             <Sparkles size={12} />
-            Open to opportunities in Dubai
+            Open to Full Stack opportunities in Dubai
           </motion.div>
 
           <motion.h1
@@ -52,11 +50,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className={styles.heading}
           >
-            Hi, I'm{" "}
-            <span className="gradient-text">Aimen</span>
+            Hi, I'm <span className={styles.gradientText}>Aimen</span>
           </motion.h1>
 
-          {/* Animated word swap */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,12 +79,22 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className={styles.description}
           >
-            Fashion design meets frontend engineering. I craft fast, beautiful,
-            and accessible digital experiences — blending creative intuition
-            with clean, scalable code.
+            I build complete web applications — from pixel-perfect React interfaces
+            to scalable Node.js backends. Fashion design meets full stack engineering,
+            creating digital experiences that are both beautiful and powerful.
           </motion.p>
 
-          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className={styles.stackPills}
+          >
+            {["React", "Node.js", "MongoDB", "TypeScript", "REST APIs"].map((s) => (
+              <span key={s} className={styles.stackPill}>{s}</span>
+            ))}
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,7 +119,6 @@ export default function Hero() {
             </motion.button>
           </motion.div>
 
-          {/* Stats */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -133,7 +138,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* ── Illustration Column ── */}
+        {/* Illustration Column */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -157,7 +162,7 @@ export default function Hero() {
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + i * 0.08 }}
-                  className={`${styles.codeLine} ${line.color}`}
+                  className={`${styles.codeLine} ${line.cls}`}
                 >
                   {line.text}
                 </motion.div>
@@ -165,16 +170,15 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Floating badges */}
           {[
-            { label: "React Dev", icon: "⚛️", className: styles.badgeTopRight },
-            { label: "Dubai Ready", icon: "🇦🇪", className: styles.badgeBottomLeft },
+            { label: "Full Stack Dev", icon: "⚡", cls: styles.badgeTopRight },
+            { label: "Dubai Ready",    icon: "🇦🇪", cls: styles.badgeBottomLeft },
           ].map((b) => (
             <motion.div
               key={b.label}
               animate={{ y: [0, -6, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              className={`${styles.floatingBadge} ${b.className}`}
+              className={`${styles.floatingBadge} ${b.cls}`}
             >
               <span>{b.icon}</span> {b.label}
             </motion.div>
@@ -182,7 +186,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll hint */}
       <motion.button
         onClick={() => scrollTo("Projects")}
         animate={{ y: [0, 8, 0] }}
