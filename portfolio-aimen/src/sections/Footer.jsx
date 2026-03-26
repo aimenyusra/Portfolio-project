@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 
 const SOCIAL_LINKS = [
   { Icon: GitBranch,       href: "#",                          label: "GitHub" },
-  { Icon: Mail,         href: "mailto:aimen@example.com",   label: "Email" },
+  { Icon: Mail,         href: "mailto:aimenbather@gmail.com",   label: "Email" },
   { Icon: ExternalLink, href: "#",                          label: "LinkedIn" },
 ];
 
