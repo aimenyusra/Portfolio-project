@@ -2,11 +2,29 @@
   padding: 6rem 0;
   background: #070a12;
   position: relative;
+  overflow: hidden;
 }
 
 .bgGrid {
   position: absolute;
   inset: 0;
+  background-image:
+    linear-gradient(rgba(124, 58, 237, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 2rem;
+  }
 }
 
 .header {
@@ -19,116 +37,141 @@
   font-weight: 900;
   color: #ffffff;
   letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
 }
 
-/* Grid */
-.grid {
-  display: grid;
+.gradientText {
+  background: linear-gradient(135deg, #a78bfa, #67e8f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtext {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* ── Strips ── */
+.strips {
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  grid-template-columns: 1fr;
-  margin-bottom: 2.5rem;
+  position: relative;
 }
 
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+.stripRow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.stripLabel {
+  writing-mode: horizontal-tb;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  min-width: 5rem;
+  text-align: right;
+  padding-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .stripLabel {
+    display: none;
   }
 }
 
-/* Category Cards */
-.card {
-  border-radius: 1rem;
+.label_violet  { color: #a78bfa; }
+.label_cyan    { color: #67e8f9; }
+.label_emerald { color: #6ee7b7; }
+
+/* Track outer — clips the marquee and holds fade edges */
+.stripTrackOuter {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, #070a12, transparent);
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, #070a12, transparent);
+}
+
+/* ── Marquee ── */
+.marqueeWrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marqueeTrack.reverse {
+  animation: marqueeReverse 28s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marqueeReverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+/* ── Item Cards ── */
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.75rem;
   background: #0d1117;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 1.5rem;
-  height: 100%;
-  transition: border-color 0.3s ease;
-}
-
-.card_violet { border-color: rgba(124, 58, 237, 0.2); }
-.card_cyan   { border-color: rgba(14, 165, 233, 0.2); }
-.card_emerald{ border-color: rgba(16, 185, 129, 0.2); }
-
-.cardHeader {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.header_violet { color: #a78bfa; }
-.header_cyan   { color: #67e8f9; }
-.header_emerald{ color: #6ee7b7; }
-
-.cardTitle {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #ffffff;
-}
-
-/* Skill Badges */
-.skillBadges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.skillBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.375rem 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid;
-  font-size: 0.75rem;
-  font-weight: 500;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, background 0.2s ease;
   cursor: default;
 }
 
-.badge_violet {
-  background: rgba(124, 58, 237, 0.1);
-  border-color: rgba(124, 58, 237, 0.25);
-  color: #c4b5fd;
+.marqueeItem:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  background: rgba(124, 58, 237, 0.07);
 }
 
-.badge_cyan {
-  background: rgba(14, 165, 233, 0.1);
-  border-color: rgba(14, 165, 233, 0.25);
-  color: #67e8f9;
+.marqueeIcon {
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
-.badge_emerald {
-  background: rgba(16, 185, 129, 0.1);
-  border-color: rgba(16, 185, 129, 0.25);
-  color: #6ee7b7;
-}
-
-/* Highlights Strip */
-.highlights {
-  border-radius: 1rem;
-  background: linear-gradient(135deg,
-    rgba(124, 58, 237, 0.12),
-    rgba(168, 85, 247, 0.08),
-    rgba(14, 165, 233, 0.12)
-  );
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  padding: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.highlightItem {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.marqueeName {
+  font-size: 0.85rem;
+  font-weight: 600;
   color: #cbd5e1;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.highlightIcon {
-  color: #a78bfa;
-  display: flex;
 }
