@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useScrollSpy, useScrolled } from "../hooks/useScrollSpy";
-import { NAV_LINKS } from "../data";
+import { NAV_LINKS } from "../data/index.jsx"
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {

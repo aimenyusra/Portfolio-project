@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NAV_LINKS } from "../data";
+import { NAV_LINKS } from "../data/index.jsx";
 
 export function useScrollSpy() {
   const [active, setActive] = useState("Home");

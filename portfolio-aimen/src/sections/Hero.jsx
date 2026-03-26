@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Mail, ChevronDown, Sparkles } from "lucide-react";
-import { HERO_WORDS } from "../data";
+import { HERO_WORDS } from "../data/index.jsx";
 import styles from "./Hero.module.css";
 
 export default function Hero() {

@@ -1,7 +1,7 @@
 import FadeUp from "../components/Fadeup";
 import SectionLabel from "../components/SectionLabel";
 import ProjectCard from "../components/ProjectCard";
-import { PROJECTS } from "../data";
+import { PROJECTS } from "../data/index.jsx";
 import styles from "./Projects.module.css";
 
 export default function Projects() {

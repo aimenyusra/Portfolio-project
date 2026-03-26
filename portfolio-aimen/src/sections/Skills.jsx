@@ -1,6 +1,7 @@
-import FadeUp from "../components/FadeUp";
+import React from "react";
+import FadeUp from "../components/Fadeup";
 import SectionLabel from "../components/SectionLabel";
-import { SKILLS } from "../data";
+import { SKILLS } from "../data/index.jsx";
 import styles from "./Skills.module.css";
 
 function MarqueeStrip({ items, reverse = false }) {

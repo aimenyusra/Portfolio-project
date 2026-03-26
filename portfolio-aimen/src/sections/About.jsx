@@ -1,7 +1,7 @@
 import { MapPin } from "lucide-react";
 import FadeUp from "../components/Fadeup";
 import SectionLabel from "../components/SectionLabel";
-import { ABOUT_CARDS } from "../data";
+import { ABOUT_CARDS } from "../data/index.jsx";
 import styles from "./About.module.css";
 
 export default function About() {

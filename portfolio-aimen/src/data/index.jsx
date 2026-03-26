@@ -1,3 +1,22 @@
+import {
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiFramer,
+  SiHtml5,
+  SiBootstrap,
+  SiFigma,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiGit,
+  SiGithub,
+  SiVite,
+  SiPostman,
+} from "react-icons/si";
+import {FaCss3Alt} from "react-icons/fa";
+
+import { VscVscode } from "react-icons/vsc";
 export const NAV_LINKS = ["Home", "Projects", "Skills", "About", "Contact"];
 
 export const PROJECTS = [
@@ -40,27 +59,26 @@ export const PROJECTS = [
 ];
 
 export const SKILLS = {
-  Frontend: [
-    { name: "React", icon: "⚛️" },
-    { name: "TypeScript", icon: "📘" },
-    { name: "JavaScript", icon: "🟡" },
-    { name: "CSS Modules", icon: "🎨" },
-    { name: "Framer Motion", icon: "🎬" },
-    { name: "HTML5 / CSS3", icon: "🌐" },
-    { name: "Bootstrap", icon: "🅱️" },
-    { name: "Figma / UI-UX", icon: "✏️" },
+  Frontend: [   { name: "React", icon: <SiReact color="#61DAFB" /> },
+    { name: "TypeScript", icon: <SiTypescript color="#3178C6" /> },
+    { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
+    { name: "CSS Modules", icon: <FaCss3Alt color="#1572B6" /> },
+    { name: "Framer Motion", icon: <SiFramer /> },
+    { name: "HTML5 / CSS3", icon: <SiHtml5 color="#E34F26" /> },
+    { name: "Bootstrap", icon: <SiBootstrap color="#7952B3" /> },
+    { name: "Figma / UI-UX", icon: <SiFigma color="#F24E1E" /> },
   ],
   Backend: [
-    { name: "Node.js", icon: "🟢" },
-    { name: "Express.js", icon: "🚀" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "REST APIs", icon: "🔗" },
+       { name: "Node.js", icon: <SiNodedotjs color="#339933" /> },
+    { name: "Express.js", icon: <SiExpress /> },
+    { name: "MongoDB", icon: <SiMongodb color="#47A248" /> },
+    { name: "REST APIs", icon: <SiPostman color="#FF6C37" /> },
   ],
-  Tools: [
-    { name: "Git & GitHub", icon: "🐙" },
-    { name: "Vite", icon: "⚡" },
-    { name: "VS Code", icon: "💻" },
-    { name: "Postman", icon: "📬" },
+  Tools: [  { name: "Git", icon: <SiGit color="#F05032" /> },
+    { name: "GitHub", icon: <SiGithub /> },
+    { name: "Vite", icon: <SiVite color="#646CFF" /> },
+    { name: "VS Code", icon: <VscVscode color="#007ACC" /> },
+    { name: "Postman", icon: <SiPostman color="#FF6C37" /> },
   ],
 };
 
