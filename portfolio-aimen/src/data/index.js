@@ -6,8 +6,8 @@ export const PROJECTS = [
     desc: "A full-featured HR platform with 9 pages, analytics, and employee management built with React Router and Recharts.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
     tech: ["React", "Vite", "React Router", "Recharts", "CSS Modules"],
-    demo: "https://hr-dashboard-wheat.vercel.app/",
-    github: "https://github.com/aimenyusra/hr-management-dashboard",
+    demo: "#",
+    github: "#",
     accent: "#7c3aed",
   },
   {
@@ -23,7 +23,7 @@ export const PROJECTS = [
     title: "Crochet Business Landing Page",
     desc: "Pastel-aesthetic e-commerce landing page for @crochetbyhana with live weather API and product listings.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-    tech: ["React", "Tailwind CSS", "Framer Motion", "Axios", "REST API"],
+    tech: ["React", "Framer Motion", "Axios", "REST API"],
     demo: "#",
     github: "#",
     accent: "#ec4899",
@@ -32,9 +32,9 @@ export const PROJECTS = [
     title: "Real Estate Website",
     desc: "Modern property listing platform with advanced filters, map integration, and responsive design.",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Figma"],
-    demo: "https://real-estate-react-app-nine.vercel.app/",
-    github: "https://github.com/aimenyusra/real-estate-react-app",
+    tech: ["React", "TypeScript", "Figma"],
+    demo: "#",
+    github: "#",
     accent: "#10b981",
   },
 ];
@@ -44,7 +44,7 @@ export const SKILLS = {
     { name: "React", icon: "⚛️" },
     { name: "TypeScript", icon: "📘" },
     { name: "JavaScript", icon: "🟡" },
-    { name: "Tailwind CSS", icon: "🎨" },
+    { name: "CSS Modules", icon: "🎨" },
     { name: "Framer Motion", icon: "🎬" },
     { name: "HTML5 / CSS3", icon: "🌐" },
     { name: "Bootstrap", icon: "🅱️" },
@@ -66,14 +66,14 @@ export const SKILLS = {
 
 export const ABOUT_CARDS = [
   { label: "BSc Fashion Design", sub: "TBAC College, 2022–2025" },
-  { label: "Frontend Focused", sub: "React · TypeScript · Tailwind" },
+  { label: "Frontend Focused", sub: "React · TypeScript · CSS" },
   { label: "Creative Background", sub: "Figma · UI-UX · Visual Design" },
   { label: "Dubai-Ready", sub: "Open to relocation & remote" },
 ];
 
 export const HERO_WORDS = [
-  "Full-Stack Developer",
+  "Full Stack Developer",
+  "React + Node.js Engineer",
   "UI/UX Enthusiast",
-  "React Specialist",
   "Creative Coder",
 ];
