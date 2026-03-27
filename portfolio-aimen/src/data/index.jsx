@@ -13,7 +13,9 @@ import {
   SiGithub,
   SiVite,
   SiPostman,
+  SiTailwindcss,
 } from "react-icons/si";
+import { TbBrandAdobePhotoshop } from "react-icons/tb";
 import {FaCss3Alt} from "react-icons/fa";
 
 import { VscVscode } from "react-icons/vsc";
@@ -66,7 +68,9 @@ export const SKILLS = {
     { name: "Framer Motion", icon: <SiFramer /> },
     { name: "HTML5 / CSS3", icon: <SiHtml5 color="#E34F26" /> },
     { name: "Bootstrap", icon: <SiBootstrap color="#7952B3" /> },
-    { name: "Figma / UI-UX", icon: <SiFigma color="#F24E1E" /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss color="#06B6D4" /> },
+    { name: "Figma (UI/UX)", icon: <SiFigma color="#F24E1E" /> },
+  
   ],
   Backend: [
        { name: "Node.js", icon: <SiNodedotjs color="#339933" /> },
@@ -79,12 +83,15 @@ export const SKILLS = {
     { name: "Vite", icon: <SiVite color="#646CFF" /> },
     { name: "VS Code", icon: <VscVscode color="#007ACC" /> },
     { name: "Postman", icon: <SiPostman color="#FF6C37" /> },
+    { name: "Figma", icon: <SiFigma color="#ff37de" /> },
+   { name: "Framer", icon: <SiFramer color="#6e6d89" /> },
+    { name: "Adobe Photoshop", icon: <TbBrandAdobePhotoshop color="#37e4ff" /> },
   ],
 };
 
 export const ABOUT_CARDS = [
   { label: "BSc Fashion Design", sub: "TBAC College, 2022–2025" },
-  { label: "Frontend Focused", sub: "React · TypeScript · CSS" },
+  { label: "FullStack Focused", sub: "React · Express.js · MongoDB" },
   { label: "Creative Background", sub: "Figma · UI-UX · Visual Design" },
   { label: "Dubai-Ready", sub: "Open to relocation & remote" },
 ];

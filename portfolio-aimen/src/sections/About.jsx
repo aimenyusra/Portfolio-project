@@ -1,8 +1,9 @@
 import { MapPin } from "lucide-react";
-import FadeUp from "../components/Fadeup";
+import FadeUp from "../components/FadeUp";
 import SectionLabel from "../components/SectionLabel";
-import { ABOUT_CARDS } from "../data/index.jsx";
+import { ABOUT_CARDS } from "../data";
 import styles from "./About.module.css";
+import avatarImg from "../assets/avatar.png"; // place your image here
 
 export default function About() {
   return (
@@ -13,20 +14,22 @@ export default function About() {
         <div className={styles.grid}>
           {/* Image Column */}
           <FadeUp>
-            <div className={styles.imageWrapper}>
-              <div className={styles.imageGlow} />
-              <div className={styles.imageCard}>
-                <div className={styles.avatarArea}>
-                  <div className={styles.avatarCircle}>A</div>
-                  <div className={styles.avatarName}>Aimen Yusra</div>
-                  <div className={styles.avatarRole}>Frontend Developer</div>
-                  <div className={styles.avatarLocation}>
-                    <MapPin size={11} /> India → Dubai
-                  </div>
+            <div className={styles.avatarContainer}>
+              {/* glow */}
+              <div className="styles.avatarGlow"></div>
+              {/* png avatar */}
+              <img src={avatarImg}
+              alt="Aimen Yusra"
+              className={styles.avatar}
+               />
+               {/* info below avatar */}
+              <div className={styles.avatarInfo}>
+                <h3>Aimen Yusra</h3>
+                <p>Full Stack Developer</p>
+                <div className= {styles.location}>
+                  <MapPin size={14} /> India → Dubai
                 </div>
               </div>
-              <span className={styles.dotTopRight} />
-              <span className={styles.dotBottomLeft} />
             </div>
           </FadeUp>
 
@@ -41,19 +44,14 @@ export default function About() {
 
             <div className={styles.paragraphs}>
               <p>
-                I'm a frontend developer with a BSc in Fashion Design from Tamil Nadu, India —
-                a combination that gives me a rare edge: I think visually and build precisely.
-                My design intuition means I don't just implement UIs, I craft them.
+          I’m a full-stack developer focused on building modern, scalable, and user-centric web applications.
+           I enjoy turning complex problems into clean, intuitive, and high-performing digital experiences.
               </p>
               <p>
-                My stack centers around React, Vite, TypeScript, and Tailwind CSS, with experience
-                in Node.js and MongoDB for full-stack work. Every project is an opportunity to push
-                both aesthetics and performance simultaneously.
+            My core stack includes React, TypeScript, and modern CSS on the frontend, combined with Node.js, Express, and MongoDB on the backend. I work across the full development lifecycle — from designing responsive interfaces to building robust APIs and managing data efficiently
               </p>
               <p>
-                Currently targeting the Dubai tech ecosystem, I'm eager to join a team where clean
-                design and scalable frontend architecture are valued — whether in fashion-tech, retail,
-                or SaaS.
+                I’m particularly interested in creating products that balance performance with great design. Currently, I’m seeking opportunities where I can contribute to real-world projects, grow as a full-stack developer, and build impactful solutions in collaborative environments.
               </p>
             </div>
 
