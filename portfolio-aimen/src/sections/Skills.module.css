@@ -17,27 +17,22 @@
 .container {
   max-width: 72rem;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
   position: relative;
 }
 
-@media (min-width: 640px) {
-  .container {
-    padding: 0 2rem;
-  }
-}
-
+/* Header — centered */
 .header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 
 .heading {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   font-weight: 900;
   color: #ffffff;
   letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .gradientText {
@@ -49,48 +44,40 @@
 
 .subtext {
   color: #64748b;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* ── Strips ── */
 .strips {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  position: relative;
+  gap: 2.5rem;
+  padding: 0 0 1rem 0;
 }
 
 .stripRow {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
+/* Category label — centered above strip */
 .stripLabel {
-  writing-mode: horizontal-tb;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  min-width: 5rem;
-  text-align: right;
-  padding-right: 0.75rem;
-  flex-shrink: 0;
-}
-
-@media (max-width: 480px) {
-  .stripLabel {
-    display: none;
-  }
+  text-align: center;
 }
 
 .label_violet  { color: #a78bfa; }
 .label_cyan    { color: #67e8f9; }
 .label_emerald { color: #6ee7b7; }
 
-/* Track outer — clips the marquee and holds fade edges */
+/* Track outer — full width with fade edges */
 .stripTrackOuter {
-  flex: 1;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -100,7 +87,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 5rem;
+  width: 6rem;
   z-index: 2;
   pointer-events: none;
 }
@@ -123,13 +110,13 @@
 
 .marqueeTrack {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 .marqueeTrack.reverse {
-  animation: marqueeReverse 28s linear infinite;
+  animation: marqueeReverse 30s linear infinite;
 }
 
 @keyframes marquee {
@@ -146,13 +133,13 @@
   animation-play-state: paused;
 }
 
-/* ── Item Cards ── */
+/* ── Item Cards — bigger size ── */
 .marqueeItem {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1.1rem;
-  border-radius: 0.75rem;
+  gap: 0.85rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 1rem;
   background: #0d1117;
   border: 1px solid rgba(255, 255, 255, 0.08);
   white-space: nowrap;
@@ -161,17 +148,25 @@
 }
 
 .marqueeItem:hover {
-  border-color: rgba(124, 58, 237, 0.4);
-  background: rgba(124, 58, 237, 0.07);
+  border-color: rgba(124, 58, 237, 0.45);
+  background: rgba(124, 58, 237, 0.08);
 }
 
+/* Icon — bigger */
 .marqueeIcon {
-  font-size: 1.1rem;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
 }
 
+.marqueeIcon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Name — bigger */
 .marqueeName {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #cbd5e1;
+  color: #e2e8f0;
 }

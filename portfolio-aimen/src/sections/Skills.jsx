@@ -1,4 +1,3 @@
-import React from "react";
 import FadeUp from "../components/Fadeup";
 import SectionLabel from "../components/SectionLabel";
 import { SKILLS } from "../data/index.jsx";
@@ -21,9 +20,9 @@ function MarqueeStrip({ items, reverse = false }) {
 }
 
 const CATEGORY_CONFIG = {
-  Frontend: { label: "Frontend",  color: "violet", reverse: false },
-  Backend:  { label: "Backend",   color: "cyan",   reverse: true  },
-  Tools:    { label: "Tools",     color: "emerald", reverse: false },
+  Frontend: { label: "Frontend", color: "violet", reverse: false },
+  Backend:  { label: "Backend",  color: "cyan",   reverse: true  },
+  Tools:    { label: "Tools",    color: "emerald", reverse: false },
 };
 
 export default function Skills() {
@@ -43,18 +42,18 @@ export default function Skills() {
         </FadeUp>
       </div>
 
-      {/* Marquee strips — full width, outside container */}
+      {/* Marquee strips */}
       <div className={styles.strips}>
         {Object.entries(SKILLS).map(([cat, items]) => {
           const config = CATEGORY_CONFIG[cat];
           return (
             <FadeUp key={cat}>
               <div className={styles.stripRow}>
+                {/* Centered label above strip */}
                 <div className={`${styles.stripLabel} ${styles[`label_${config.color}`]}`}>
                   {config.label}
                 </div>
                 <div className={styles.stripTrackOuter}>
-                  {/* Fade edges */}
                   <div className={styles.fadeLeft} />
                   <div className={styles.fadeRight} />
                   <MarqueeStrip items={items} reverse={config.reverse} />
