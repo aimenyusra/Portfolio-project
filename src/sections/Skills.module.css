@@ -1,0 +1,172 @@
+.section {
+  padding: 6rem 0;
+  background: #070a12;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(124, 58, 237, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 58, 237, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* Header — centered */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.heading {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.6rem;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #a78bfa, #67e8f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtext {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* ── Strips ── */
+.strips {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0 0 1rem 0;
+}
+
+.stripRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Category label — centered above strip */
+.stripLabel {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.label_violet  { color: #a78bfa; }
+.label_cyan    { color: #67e8f9; }
+.label_emerald { color: #6ee7b7; }
+
+/* Track outer — full width with fade edges */
+.stripTrackOuter {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, #070a12, transparent);
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, #070a12, transparent);
+}
+
+/* ── Marquee ── */
+.marqueeWrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marqueeTrack.reverse {
+  animation: marqueeReverse 30s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marqueeReverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+/* ── Item Cards — bigger size ── */
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 1rem;
+  background: #0d1117;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  cursor: default;
+}
+
+.marqueeItem:hover {
+  border-color: rgba(124, 58, 237, 0.45);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* Icon — bigger */
+.marqueeIcon {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+.marqueeIcon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Name — bigger */
+.marqueeName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
