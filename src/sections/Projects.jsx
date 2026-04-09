@@ -1,4 +1,4 @@
-import FadeUp from "../components/Fadeup";
+import  FadeUp from "../components/FadeUp.jsx";
 import SectionLabel from "../components/SectionLabel";
 import ProjectCard from "../components/ProjectCard";
 import { PROJECTS } from "../data/index.jsx";

@@ -1,4 +1,4 @@
-import FadeUp from "../components/Fadeup";
+import FadeUp from "../components/FadeUp";
 import SectionLabel from "../components/SectionLabel";
 import { SKILLS } from "../data/index.jsx";
 import styles from "./Skills.module.css";

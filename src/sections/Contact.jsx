@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Mail, GitBranch, ExternalLink } from "lucide-react";
-import FadeUp from "../components/Fadeup";
+import FadeUp from "../components/FadeUp";
 import SectionLabel from "../components/SectionLabel";
 import styles from "./Contact.module.css";
 
