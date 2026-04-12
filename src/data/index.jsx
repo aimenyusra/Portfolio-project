@@ -17,7 +17,8 @@ import {
 } from "react-icons/si";
 import { TbBrandAdobePhotoshop } from "react-icons/tb";
 import {FaCss3Alt} from "react-icons/fa";
-
+import dashboard from "../assets/dashboard.png";
+import realestate from "../assets/realestate.png";
 import { VscVscode } from "react-icons/vsc";
 export const NAV_LINKS = ["Home", "Projects", "Skills", "About", "Contact"];
 
@@ -25,7 +26,7 @@ export const PROJECTS = [
   {
     title: "HR Management Dashboard",
     desc: "A full-featured HR platform with 9 pages, analytics, and employee management built with React Router and Recharts.",
-    image: "src/assets/dashboard.png",
+    image: dashboard,
     tech: ["React", "Vite", "React Router", "Recharts", "CSS Modules"],
     demo: "https://hr-dashboard-wheat.vercel.app/",
     github: "https://github.com/aimenyusra/real-estate-react-app",
@@ -35,7 +36,7 @@ export const PROJECTS = [
   {
     title: "Real Estate Website",
     desc: "Modern property listing platform with advanced filters, map integration, and responsive design.",
-    image: "src/assets/realestate.png",
+    image: realestate,
     tech: ["React", "React Router", "CSS Modules"],
     demo: "https://real-estate-react-app-nine.vercel.app/",
     github: "https://github.com/aimenyusra/real-estate-react-app",
