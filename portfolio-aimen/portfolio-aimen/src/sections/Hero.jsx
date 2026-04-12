@@ -1,4 +1,4 @@
-import { useState, useEffect,} from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Mail, ChevronDown, Sparkles } from "lucide-react";
 import { HERO_WORDS } from "../data/index.jsx";
@@ -6,7 +6,6 @@ import styles from "./Hero.module.css";
 
 export default function Hero() {
   const [wordIdx, setWordIdx] = useState(0);
-
 
   useEffect(() => {
     const t = setInterval(() => setWordIdx((i) => (i + 1) % HERO_WORDS.length), 2800);
@@ -80,7 +79,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className={styles.description}
           >
-            I'm a full stack developer with a passion for crafting seamless web experiences. With a background in fashion design, I bring a unique blend of creativity and technical skill to every project. I'm currently open to new opportunities in Dubai, where I can contribute my expertise in React, Node.js, and UI/UX design to build impactful digital solutions.
+            I build complete web applications — from pixel-perfect React interfaces
+            to scalable Node.js backends. Fashion design meets full stack engineering,
+            creating digital experiences that are both beautiful and powerful.
           </motion.p>
 
           <motion.div

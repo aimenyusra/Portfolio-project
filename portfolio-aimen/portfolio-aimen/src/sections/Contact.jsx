@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Mail, GitBranch, ExternalLink } from "lucide-react";
-import FadeUp from "../components/FadeUp";
+import FadeUp from "../components/Fadeup";
 import SectionLabel from "../components/SectionLabel";
 import styles from "./Contact.module.css";
 
@@ -17,14 +17,14 @@ export default function Contact() {
   };
 
   const fields = [
-    { key: "name",  label: "Your Name",      type: "text",  placeholder: "Your name here" },
-    { key: "email", label: "Email Address",  type: "email", placeholder: "Your email here" },
+    { key: "name",  label: "Your Name",      type: "text",  placeholder: "Jane Smith" },
+    { key: "email", label: "Email Address",  type: "email", placeholder: "jane@example.com" },
   ];
 
   const socials = [
-    { icon: <Mail size={14} />,         label: "Email", href: "mailto:aimenbather@gmail.com" },
-    { icon: <GitBranch size={14} />,       label: "GitHub",            href: "https://github.com/aimenyusra" },
-    { icon: <ExternalLink size={14} />, label: "LinkedIn",          href: "https://www.linkedin.com/in/aimen-yusra-1156872b1/" },
+    { icon: <Mail size={14} />,         label: "aimen@example.com", href: "mailto:aimen@example.com" },
+    { icon: <GitBranch size={14} />,       label: "GitHub",            href: "#" },
+    { icon: <ExternalLink size={14} />, label: "LinkedIn",          href: "#" },
   ];
 
   return (
