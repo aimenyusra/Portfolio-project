@@ -100,7 +100,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className={styles.buttons}
           >
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.04, boxShadow: "0 0 30px rgba(124,58,237,0.5)" }}
               whileTap={{ scale: 0.97 }}
               onClick={() => scrollTo("Projects")}
@@ -115,7 +115,7 @@ export default function Hero() {
               className={styles.btnSecondary}
             >
               Contact Me <Mail size={16} />
-            </motion.button>
+            </motion.button> */}
           </motion.div>
 
           <motion.div

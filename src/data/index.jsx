@@ -51,8 +51,7 @@ export const PROJECTS = [
     image: doit,
     tech: ["Html5", "CSS3", "JavaScript","Node.js", "Express.js", "MongoDB"],
     demo: "https://todo-kappa-pink-57.vercel.app/",
-    github: ["https://github.com/aimenyusra/real-estate-react-app",
-           "https://github.com/aimenyusra/todo-backend" ] ,
+    github: "https://github.com/aimenyusra/real-estate-react-app",
             
     accent: "#1070b9",
   },
