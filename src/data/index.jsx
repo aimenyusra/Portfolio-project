@@ -19,6 +19,7 @@ import { TbBrandAdobePhotoshop } from "react-icons/tb";
 import {FaCss3Alt} from "react-icons/fa";
 import dashboard from "../assets/dashboard.png";
 import realestate from "../assets/realestate.png";
+import doit from "../assets/doit.png"
 import { VscVscode } from "react-icons/vsc";
 export const NAV_LINKS = ["Home", "Projects", "Skills", "About", "Contact"];
 
@@ -41,6 +42,17 @@ export const PROJECTS = [
     demo: "https://real-estate-react-app-nine.vercel.app/",
     github: "https://github.com/aimenyusra/real-estate-react-app",
     accent: "#10b981",
+  },
+  {
+    title: "DoIt - Task Management App",
+    desc: "Modern task management application with a clean UI and robust functionality.",
+    image: doit,
+    tech: ["Html5", "CSS3", "JavaScript","Node.js", "Express.js", "MongoDB"],
+    demo: "https://todo-kappa-pink-57.vercel.app/",
+    github: ["https://github.com/aimenyusra/real-estate-react-app",
+           "https://github.com/aimenyusra/todo-backend" ] ,
+            
+    accent: "#1070b9",
   },
 ];
 
