@@ -21,6 +21,8 @@ import dashboard from "../assets/dashboard.png";
 import realestate from "../assets/realestate.png";
 import doit from "../assets/doit.png"
 import { VscVscode } from "react-icons/vsc";
+
+
 export const NAV_LINKS = ["Home", "Projects", "Skills", "About", "Contact"];
 
 export const PROJECTS = [
